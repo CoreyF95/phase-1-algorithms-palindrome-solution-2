@@ -1,13 +1,31 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  for (let i = 0; i < word.length; i++) {
+    const j = word.length - 1 - i;
+    const startChar = word[i];
+    const endChar = word[j];
+    if (startChar !== endChar) {
+      return false;
+    }
+    return true;
+  }
 }
 
 /* 
-  Add your pseudocode here
+  create function palindrome that takes a string as an argument
+    iterate through the length of the word
+      create variable for the first character
+      create variable for the last character
+      if first character is equal to the last character
+        return true
+      if first character is not equal to the last character
+        return false
 */
 
 /*
-  Add written explanation of your solution here
+  First, I iterated through the length of the word divided by two. 
+  Then, I saved the initial value of i to startChar and the initial value of j to endChar.
+  Next, I set up an if statement. If the startChar was not equal to endChar, the function returns false.
+  If startChar was equal to endChar, the function returns true.
 */
 
 // You can run `node index.js` to view these console logs
